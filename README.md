@@ -10,14 +10,14 @@ _An application that determines a user’s age based on a planet’s solar years
 _Note: This project currently does not have a front-end. It only have business logic and tests_
 
 ### Test Driven Development Specs
-_Take in the user's DOB and find the user's age in Earth years._
-_The program will return the user's age in Mercury years. (A Mercury year is .24 Earth years.)_
-_The program will return the user's age in Venus years. (A Venus year is .62 Earth years.)_
-_The program will return the user's age in Mars years. (A Mars year is 1.88 Earth years.)_
-_The program will return the user's age in Jupiter years. (A Jupiter year is 11.86 Earth years.)_
-_The program will calculate the user’s life expectancy on each planet using the average life expectancy for their demographic on Earth._
-_The program will determines how many years a user has left to live on each planet._
-_If a user has already surpassed the average life expectancy, the program will return the number of years they have lived past the life expectancy._
+1. _Take in the user's DOB and find the user's age in Earth years._
+2. _The program will return the user's age in Mercury years. (A Mercury year is .24 Earth years.)_
+3. _The program will return the user's age in Venus years. (A Venus year is .62 Earth years.)_
+4. _The program will return the user's age in Mars years. (A Mars year is 1.88 Earth years.)_
+5. _The program will return the user's age in Jupiter years. (A Jupiter year is 11.86 Earth years.)_
+6. _The program will calculate the user’s life expectancy on each planet using the average life expectancy for their demographic on Earth._
+7. _The program will determines how many years a user has left to live on each planet._
+8. _If a user has already surpassed the average life expectancy, the program will return the number of years they have lived past the life expectancy._
 
 ## Setup/Installation Requirements
 

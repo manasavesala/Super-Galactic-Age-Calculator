@@ -21,22 +21,22 @@ describe('AgeCalculator', function() {
 
   it('should test whether mercury age is correct', function() {
     let expectedAge = Math.floor(testEarthAge / .24);
-    expect(person.getEarthAge()).toEqual(expectedAge);
+    expect(person.getMercuryAge()).toEqual(expectedAge);
   });
 
   it('should test whether venus age is correct', function() {
     let expectedAge = Math.floor(testEarthAge / .62);
-    expect(person.getEarthAge()).toEqual(expectedAge);
+    expect(person.getVenusAge()).toEqual(expectedAge);
   });
 
   it('should test whether mars age is correct', function() {
     let expectedAge = Math.floor(testEarthAge / 1.88);
-    expect(person.getEarthAge()).toEqual(expectedAge);
+    expect(person.getMarsAge()).toEqual(expectedAge);
   });
 
   it('should test whether jupiter age is correct', function() {
     let expectedAge = Math.floor(testEarthAge / 11.86);
-    expect(person.getEarthAge()).toEqual(expectedAge);
+    expect(person.getJupiterAge()).toEqual(expectedAge);
   });
 });
 
@@ -60,26 +60,46 @@ describe('LifeExpectancy', function() {
   });
 
   it('should test whether mercury LifeExpectancy is correct', function() {
-    let age = Math.floor(testEarthAge / .24);
-    let le = Math.floor(testEarthLifeExpectancy/ .24);
-    expect(person.getMercuryYearsLeft()).toEqual(le - age);
+    let age = (testEarthAge / .24);
+    let le = (testEarthLifeExpectancy/ .24);
+    expect(person.getMercuryYearsLeft()).toEqual(Math.floor(le - age));
   });
 
   it('should test whether venus LifeExpectancy is correct', function() {
-    let age = Math.floor(testEarthAge / .62);
-    let le = Math.floor(testEarthLifeExpectancy/ .62);
-    expect(person.getVenusYearsLeft()).toEqual(le - age);
+    let age =(testEarthAge / .62);
+    let le = (testEarthLifeExpectancy/ .62);
+    expect(person.getVenusYearsLeft()).toEqual(Math.floor(le - age));
   });
 
   it('should test whether mars LifeExpectancy is correct', function() {
-    let age = Math.floor(testEarthAge / 1.88);
-    let le = Math.floor(testEarthLifeExpectancy/ 1.88);
-    expect(person.getMarsYearsLeft()).toEqual(le - age);
+    let age = (testEarthAge / 1.88);
+    let le = (testEarthLifeExpectancy/ 1.88);
+    expect(person.getMarsYearsLeft()).toEqual(Math.floor(le - age));
   });
 
   it('should test whether jupiter LifeExpectancy is correct', function() {
-    let age = Math.floor(testEarthAge / 11.86);
-    let le = Math.floor(testEarthLifeExpectancy/ 11.86);
-    expect(person.getJupiterYearsLeft()).toEqual(le - age);
+    let age = (testEarthAge / 11.86);
+    let le = (testEarthLifeExpectancy/ 11.86);
+    expect(person.getJupiterYearsLeft()).toEqual(Math.floor(le - age));
   });
 });
+
+describe('LifeExpectancy', function() {
+
+ let person;
+ let testEarthAge;
+ let testEarthLifeExpectancy;
+
+  beforeEach(function() {
+    testEarthAge = 71;
+    testEarthLifeExpectancy = 70;
+
+    let testDate = new Date();
+    testDate.setYear(testDate.getYear() - testEarthAge);
+    person = new Person(testDate.toString(), testEarthLifeExpectancy);
+  });
+
+  it('should test whether earth surpassed LifeExpectancy is correct', function() {
+    expect(person.getEarthYearsLeft()).toEqual(( testEarthAge - testEarthLifeExpectancy));
+  });
+});  

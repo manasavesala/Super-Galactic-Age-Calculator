@@ -1,4 +1,4 @@
-import { ageCalculator } from './ageCalculator.js';
+import { AgeCalculator } from './ageCalculator.js';
 import './styles.css';
 import $ from 'jquery';
 import 'bootstrap';
